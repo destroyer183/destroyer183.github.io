@@ -4,7 +4,7 @@ let musclesOwned = 0;
 let muscleCost = 10;
 let siblingsOwned = 0;
 let siblingCost = 40;
-let muffins = 0;
+let muffins = 1999;
 let previousTime = 0;
 let previousMuscleCostComparison = false;
 let previousSiblingCostComparison = false;
@@ -25,16 +25,20 @@ function main() {
 
     updateTime();
 
-    if (muffinsOwned >= 2000) {win();}
+    if (muffins >= 2000) {win();}
 }
 
 function win() {
-    // stop 'gameLoop'
+
+    clearInterval(gameLoop);
+    
     document.getElementById('muffin-button').disabled = true;
     document.getElementById('muscle-button').disabled = true;
     document.getElementById('sibling-button').disabled = true;
 
-    document.getElementById('win-header').style.display = 'block';
+    document.getElementById('win-header').style.display = 'flex';
+
+    document.getElementById('final-time-header').style.display = 'flex';
 
     document.getElementById('final-time-header').innerText = 'Your time: ' + hours + ':' + minutes + ':' + seconds;
 }
