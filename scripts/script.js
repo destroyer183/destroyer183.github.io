@@ -39,7 +39,6 @@ function win() {
     document.getElementById('win-header').style.display = 'flex';
 
     document.getElementById('final-time-header').style.display = 'flex';
-
     document.getElementById('final-time-header').innerText = 'Your time: ' + hours + ':' + minutes + ':' + seconds;
 }
 
