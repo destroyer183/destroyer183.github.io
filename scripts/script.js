@@ -539,8 +539,6 @@ function beginStory() {
 
     // run function to display text
     displayText();
-
-    armWrestleSetup();
 }
 
 
