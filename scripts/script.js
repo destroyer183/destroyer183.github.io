@@ -632,6 +632,17 @@ function quizChallenge() {
     // change page height
     document.body.style.height = newPageHeight;
 
+    let widthRatio = BASE_WIDTH / 386;
+    let heightRatio = pageWidth * imageAspectRatio / 612;
+
+    // adjust text template location
+    document.getElementById('quiz-template').style.left = (100 * widthRatio).toString() + 'px';
+    document.getElementById('quiz-template').style.top = (106 * heightRatio).toString() + 'px';
+
+    // adjust text template sizing
+    document.getElementById('quiz-template').style.width = (190 * widthRatio).toString() + 'px';
+
+
     // change displayed text to load description at the top
     document.getElementById('story-text').innerText = 'Fill out an answer for each question.\nYou need at least 3 correct answers to pass the test.';
 

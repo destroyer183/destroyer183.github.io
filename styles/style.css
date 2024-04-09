@@ -81,10 +81,6 @@ body {
 #quiz-template {
     position: absolute;
     text-align: left;
-    left: 30.8rem;
-    top: 32.5rem;
-    width: 58rem;
-    height: 108rem;
 }
 
 #quiz-header {
