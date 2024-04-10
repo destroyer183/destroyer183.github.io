@@ -137,27 +137,28 @@ const StoryData = {
 
     '1': {
         text: [
+            'You tell the teacher that your dog ate your homework.',
             'Teacher: \"Your dog didn\'t eat your homework.\"\nYou: \"I assure you, he did.\"',
             'Teacher: \"That\'s impossible! The homework was online! Dogs don\'t eat computers! You\'ve made me really angry now. I\'m calling your parents!\"',
-            'After realizing your mistake, you start thinking about what you will do. do you:'
+            'After realizing your mistake, you start thinking about what you will do.'
         ],
         choiceText: [
             'Accept the punishment', 
             'Fight the teacher', 
             'Tell the teacher you can prove you did your homework by answering homework questions', 
-            'Mystery',
-            ''
+            'Mystery'
         ],
         sectionType: TypeOptions.Normal
     },
 
     '11': { 
-        text: ['The teacher called your parents. When you get home, You are scolded and sent to your room while they think of a punishment. What will you do?'],
+        text: [
+            'The teacher called your parents. When you get home, You are scolded and sent to your room while they think of a punishment. What will you do?'
+        ],
         choiceText: [
             'Accept the punishment',
             'Fight your parents',
-            'Mystery',
-            '', ''
+            'Mystery'
         ],
         sectionType: TypeOptions.Normal
     },
@@ -179,8 +180,7 @@ const StoryData = {
         ],
         choiceText: [
             'Fight',
-            'Don\'t fight',
-            '', '', ''
+            'Don\'t fight'
         ],
         sectionType: TypeOptions.Normal
     },
@@ -217,8 +217,7 @@ const StoryData = {
         choiceText: [
             'Accept fight',
             'Refuse fight',
-            'Mystery',
-            '', ''
+            'Mystery'
         ],
         sectionType: TypeOptions.Normal
     },
@@ -275,6 +274,7 @@ const StoryData = {
 
     '2': {
         text: [
+            'You tell the teacher that you didn\'t do your homework because you were playing video games all weekend',
             'Teacher: \"Well then how prepared are you for todays pop quiz?\"',
             'You realize that you don\'t know the stuff on the homework, meaning you will most likely fail the quiz. What will you do?'
         ],
@@ -282,8 +282,7 @@ const StoryData = {
             'Attempt the quiz',
             'Try to cheat on the quiz',
             'Fight the teacher',
-            'Mystery',
-            ''
+            'Mystery'
         ],
         sectionType: TypeOptions.Normal
     },
@@ -321,7 +320,7 @@ const StoryData = {
         ],
         sectionType: TypeOptions.Quiz,
         win: 'You cheated.\nYOU LOSE',
-        lose: 'Teacher: Looks like you lose. I wonder why. Your parents will be finding out soon.'
+        lose: 'Teacher: \"Looks like you lose. I wonder why. Your parents will be finding out soon.\"'
     },
 
     '24': {
@@ -331,8 +330,7 @@ const StoryData = {
         ],
         choiceText: [
             'Take the quiz',
-            'Don\'t take the quiz',
-            '', '', ''
+            'Don\'t take the quiz'
         ],
         sectionType: TypeOptions.Normal
     },
@@ -358,14 +356,14 @@ const StoryData = {
 
     '3': {
         text: [
+            'You tell the teacher that you didn\'t do the homework because it was too easy.',
             'Teacher: \"Oh, well that\'s good. Then I assume that you wlll be able to ace the pop quiz today, because if you don\'t, your parents will be delighted to hear that you didn\'t do your homework and failed a quiz because of it.\"',
             'After realizing what you\'ve gotten yourself into, you must now choose what you will do.'
         ],
         choiceText: [
             'Attempt the quiz',
             'Fight the teacher',
-            'Mystery',
-            '', ''
+            'Mystery'
         ],
         sectionType: TypeOptions.Normal
     },
@@ -403,7 +401,7 @@ const StoryData = {
     },
 
     '321': {
-        text: ['Teacher: \"The rules are simple. I\'m going to give you a quiz, and you have to get at least 3 correct answers to win.\"'],
+        text: ['You accept your teacher\'s battle.\nTeacher: \"The rules are simple. I\'m going to give you a quiz, and you have to get at least 3 correct answers to win.\"'],
         questions: [
             '1.\nFind the square root of x:\n3x = 6(5! - 3) - ((3^3)6 - (5! - 6^2) - (6^2))',
             '2.\nSquare the number 392.',
@@ -424,7 +422,15 @@ const StoryData = {
     },
 
     '322': {
-        text: ['Teacher: \"Well then I\'m going to phone your parents and tell them about this.\"']
+        text: ['You choose to refuse the fight.\nTeacher: \"Well then I\'m going to phone your parents and tell them about this.\"']
+    },
+
+
+    '323': {
+        text: [
+            'You choose to beat up the teacher with your fists. Since he is in his fifties and you are a teen, you easily overpower him and beat him.',
+            'However, the school board ends up finding out, and you get expelled.'
+        ]
     },
 
     '33': {
@@ -439,13 +445,6 @@ const StoryData = {
         sectionType: TypeOptions.Normal
     },
 
-    '323': {
-        text: [
-            'You choose to beat up the teacher with your fists. Since he is in his fifties and you are a teen, you easily overpower him and beat him.',
-            'However, the school board ends up finding out, and you get expelled.'
-        ]
-    },
-
     '331': {
         text: [
             'You: \"Deal.\"',
@@ -457,21 +456,20 @@ const StoryData = {
     },
 
     '332': {
-        text: ['Teacher: \"Well then I\'m going to tell your parents about what has happened here as you have wasted too much of my time for this to continue.\"']
+        text: ['You don\'t accept the deal.\nTeacher: \"Well then I\'m going to tell your parents about what has happened here as you have wasted too much of my time for this to continue.\"']
     },
 
     '4': {
         text: [
             'You: \"Get ready, because I\'m about to fight you.\"',
             'Teacher: \"Well this is my class, so you\'re fighting by my rules! Math battle!\"',
-            'Unsure about whether or not you can beat your teacher at his own game, you think about what you will do'
+            'Unsure about whether or not you can beat your teacher at his own game, you think about what you will do.'
         ],
         choiceText: [
             'Accept fight',
             'Refuse fight',
             'Run away',
-            'Mystery',
-            ''
+            'Mystery'
         ],
         sectionType: TypeOptions.Normal
     },
@@ -498,6 +496,10 @@ const StoryData = {
         sectionType: TypeOptions.Quiz,
         win: 'Teacher: \"Well, you win. I guess you didn\'t need to do your homework.\"\nYOU WIN',
         lose: 'Teacher: \"Looks like you lose. I guess you should\'ve done your homework. Your parents will be finding out soon.\"'
+    },
+
+    '42': {
+        text: ['You refuse the math battle.']
     },
 
     '43': {
@@ -565,6 +567,13 @@ function loadNewInfo() {
     // try to load new choice options
     try {
 
+        // add in empty text to avoid errors
+        let missingOptions = 5 - StoryData.currentData.choiceText.length;
+        for (let i = 0; i < missingOptions; i++) {
+            StoryData.currentData.choiceText.push('');
+        }
+
+        // load new choice options
         let choiceButtons = document.getElementsByClassName('choice-button');
         for (let i = 0; i < choiceButtons.length; i++) {
             choiceButtons[i].innerText = StoryData.currentData.choiceText[i];
@@ -645,7 +654,7 @@ function quizChallenge() {
 
     // change displayed text to load description at the top
     document.getElementById('story-text').innerText = 'Fill out an answer for each question.\nYou need at least 3 correct answers to pass the test.';
-
+ 
     // hide page change buttons
     document.getElementById('page-buttons').style.display = 'none';
     
@@ -1078,14 +1087,14 @@ function armWrestleContinue() {
 function choiceSelector() {
 
     // check if current choice path is one of the first exceptions
-    if (containsObject(StoryData.choicePath, ['122', '242', '42'])) {
+    if (containsObject(StoryData.choicePath, ['122', '242'])) {
 
         // redirect choice path to another section
         StoryData.choicePath = '11';
     }
 
     // check if current choice path is one of the second exceptions
-    if (containsObject(StoryData.choicePath, ['121', '123', '21', '22', '322', '323', '332', '43', '44'])) {
+    if (containsObject(StoryData.choicePath, ['121', '123', '21', '22', '322', '323', '332', '42', '43', '44'])) {
 
         // call function to load new story data
         loadNewInfo();
@@ -1155,11 +1164,14 @@ function makeChoice(choiceNumber) {
     // print current choice path 
     console.log('current choice path: ' + StoryData.choicePath);
 
-    // incrament page number
-    StoryData.pageNumber++;
+    // update page number
+    StoryData.pageNumber = StoryData.allPages.length - 1;
 
     // run function to handle exceptions
     choiceSelector();
+
+    // go to next page
+    changePage(1);
 }
 
 
