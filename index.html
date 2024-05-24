@@ -1,150 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
     <head>
-        <title>CS Unit 1 Project</title>
+        <title>Grade 11 Unit 2 Assignment</title>
         <link rel="stylesheet" href="styles/style.css">
     </head>
 
-    <body>
+    <body onload="start();">
 
-        <h1 id="header" class="in-front">A Day at School</h1>
-
-        <p id="story-text" class="in-front">Click on the left and right sides of the screen to cycle through each panel of text.</p>
-
-        <button type="button" id="start-button" class="in-front grow" onclick="beginStory();">Start</button>
-
-        <!-- put these buttons in a div, use absolute positioning on the div, and then do the inline block thingy with the buttons. -->
-        <div id="page-buttons" class="hidden-on-load" class="in-front">
-            <button type="button" id="previous-page-button" class="change-page-button" class="in-front" onclick="changePage(-1);"></button>
-            <button type="button" id="next-page-button"     class="change-page-button" class="in-front" onclick="changePage(1);"></button>
+        <!-- header -->
+        <div id="info-bar">
+            <h1 id="header">Candidate Submission</h1>
+            <h1 id="candidate-counter" class="header-subtext hidden-on-load">0/10</h1>
+            <button type="button" id="end-candidate-input" class="grow header-button hidden-on-load" onclick="Candidate.loadVotingPage();">Vote</button>
+            <div id="submission-div" class="hidden-on-load">
+                <!-- <h1 id="candidate-choice-display" class="header-subtext">Candidate: Not Selected</h1> -->
+                <button type="button" id="submit-candidate" class="grow hidden-on-load header-button" onclick="Candidate.submitVote();">Submit</button>
+            </div>
         </div>
 
-        <button type="button" id="choice-button-1" class="choice-button hidden-on-load in-front grow" onclick="makeChoice('1');"></button>
+        <div id="info-bar-placeholder"></div>
+
+        <h1 id="voting-result" class="hidden-on-load">Winner!</h1>
         <br>
-        <button type="button" id="choice-button-2" class="choice-button hidden-on-load in-front grow" onclick="makeChoice('2');"></button>
-        <br>
-        <button type="button" id="choice-button-3" class="choice-button hidden-on-load in-front grow" onclick="makeChoice('3');"></button>
-        <br>
-        <button type="button" id="choice-button-4" class="choice-button hidden-on-load in-front grow" onclick="makeChoice('4');"></button>
-        <br>
-        <button type="button" id="choice-button-5" class="choice-button hidden-on-load in-front grow" onclick="makeChoice('5');"></button>
+        <h1 id="voting-counter" class="hidden-on-load"></h1>
 
-        <button type="button". id="begin-quiz" class="hidden-on-load in-front grow" onclick="quizChallenge();">Begin</button>
+        <div id="input-master-div"></div>
 
-        <div id="quiz-template" class="hidden-on-load in-front">
+        <div id="voting-master-div"></div>
 
-            <h2 id="quiz-header"><b>
-                Grade 11 MCR3U
-                <br>
-                Equivalent Algebraic Expressions Quiz
-            </b></h2>
-
-            <span id="date-text">Date: </span>
-
-            <pre>
-
-
-            </pre>
-
-            <div id="question-1" class="quiz-question">
-                <p class="question-text"><b id="question-1-text">1. text</b></p>
-                <input type="text" required="required" id="question-1-input" class="question-input">
-
-                <div id="question-1-output" class="hidden-on-load">
-                    <p>Your answer: <span class="question-inputted-answer"></span></p>
-                    <p class="question-answer-output"></p>
-                    <span class="question-solution-text hidden-on-load"></span>
-                </div>
-
-
-                <pre>
-
-                </pre>
-            </div>
-
-            <div id="question-2" class="quiz-question">
-                <p class="question-text"><b id="question-2-text">2. text</b></p>
-                <input type="text" required="required" id="question-2-input" class="question-input">
-
-                <div id="question-2-output" class="hidden-on-load">
-                    <p>Your answer: <span class="question-inputted-answer"></span></p>
-                    <p class="question-answer-output"></p>
-                    <span class="question-solution-text hidden-on-load"></span>
-                </div>
-
-                <pre>
-
-                </pre>
-            </div>
-
-            <div id="question-3" class="quiz-question">
-                <p class="question-text"><b id="question-3-text">3. text</b></p>
-                <input type="text" required="required" id="question-3-input" class="question-input">
-
-                <div id="question-3-output" class="hidden-on-load">
-                    <p>Your answer: <span class="question-inputted-answer"></span></p>
-                    <p class="question-answer-output"></p>
-                    <span class="question-solution-text hidden-on-load"></span>
-                </div>
-
-                <pre>
-
-                </pre>
-            </div>
-
-            <div id="question-4" class="hidden-on-load quiz-question">
-                <p class="question-text"><b id="question-4-text">4. text</b></p>
-                <input type="text" required="required" id="question-4-input" class="question-input">
-
-                <div id="question-4-output" class="hidden-on-load">
-                    <p>Your answer: <span class="question-inputted-answer"></span></p>
-                    <p class="question-answer-output"></p>
-                    <span class="question-solution-text hidden-on-load"></span>
-                </div>
-
-                <pre>
-
-                </pre>
-            </div>
-
-            <div id="question-5" class="hidden-on-load quiz-question">
-                <p class="question-text"><b id="question-5-text">5. text</b></p>
-                <input type="text" required="required" id="question-5-input" class="question-input">
-
-                <div id="question-5-output" class="hidden-on-load">
-                    <p>Your answer: <span class="question-inputted-answer"></span></p>
-                    <p class="question-answer-output"></p>
-                    <span class="question-solution-text hidden-on-load"></span>
-                </div>
-            </div>
-
-            <button type="button" id="submit-answers-button" class="hidden-on-load grow" onclick="submitAnswers();">Submit</button>
-            <button type="button" id="quiz-continue-story" class="hidden-on-load grow" onclick="quizContinueStory();">Continue</button>
-        </div>
-
-
-
-        <div id="arm-wrestle-elements" class="hidden-on-load">
-
-            <button type="button" id="begin-arm-wrestle" class="grow" onclick="armWrestleStart();">Begin</button>
-
-            <!-- <img src="assets/arm wrestle/equal.png" id="arm-image"> -->
-
-            <div id="health-background">
-                <div id="health-bar"></div>
-            </div>
-
-            <button type="button" id="click-detection" class="hidden-on-load" onclick="ArmWrestleData.armStrength += 2;"></button>
-
-            <button type="button" id="arm-wrestle-continue" class="hidden-on-load grow" onclick="armWrestleContinue();">Continue</button>
-
-
-            
-        </div>
 
 
         <script src="scripts/script.js"></script>
     </body>
+    
 </html>
