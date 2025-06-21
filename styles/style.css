@@ -1,301 +1,82 @@
 body {
     color: black;
-    background-color: white;
+    background-color: dimgrey;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-#info-bar {
-    background-color: lightgrey;
-    border-bottom: black 0.2rem solid;
-    position: fixed;
-    align-items: center;
-    z-index: 10;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-#header {
-    font-size: 4.5rem;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
-}
-
-.header-subtext {
-    font-size: 2.5rem;
-    margin: 1.75rem 0;
-    margin-top: 0;
-    display: inline-block;
-}
-
-.header-button {
-    margin: 1rem;
-    margin-top: 0;
-    padding: 0.2rem 0.7rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    border-radius: 1.5rem;
-    border-width: 0.55rem;
-    border-color: steelblue;
-    background-color: #e0eeff;
-    cursor: pointer;
-    display: inline-block;
-}
-
-#voting-result {
-    font-size: 4rem;
-    margin: 1rem auto;
-}
-
-#voting-counter {
-    font-size: 2.5rem;
-    margin: 0 auto;
-    margin-bottom: 0.5rem;
-}
-
-#closing-sentence {
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-#input-master-div {
-    display: inline-block;
-    margin: 0 auto;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-.candidate-div {
-    max-width: 100%;
-    width: fit-content;
-    font-size: 2rem;
-    background-color: dodgerblue;
-    margin: 2rem auto;
-    padding: 0.5rem;
-    border-radius: 2rem;
-}
-
-.header-div {
-    padding-right: 0.5rem;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
-.active, .candidate-div:hover {
-    background-color: deepskyblue;
-}
-
-.dd-arrow {
-    height: 2rem;
-    padding-left: 0.25rem
-}
-
-.submission-state-image {
-    padding: 0 0.5rem;
-    height: 2rem;
-}
-
-.div-header-text {
-    padding: 0 0.5rem;
-    display: block;
-    white-space: nowrap;
-}
-
-.input-div {
-    max-width: 100%;
-    width: fit-content;
-    font-size: 1.75rem;
-    overflow: hidden;
-    justify-content: left;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
+#canvas-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
 }
 
 .input-group {
-    max-width: 100%;
-    width: fit-content;
-    display: flex;
-    margin: 1.75rem 0;
-    justify-content: left;
-    text-wrap: nowrap;
-    position: relative;
-    text-align: left;
-}
-
-.input-prompt {
-    max-width: 100%;
-    width: fit-content;
-    padding: 0 1rem;
-    justify-content: left;
-}
-
-.input-container {
-    padding: 0;
-    text-wrap: nowrap;
+    background-color: lightgray;
+    border: solid 0.1rem black;
+    border-radius: 1rem;
+    z-index: 2;
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    margin: 1rem 0;
+    position: absolute;
+    bottom: 2rem;
+    margin: 0 auto;
 }
 
 .input-box {
-    font-size: 1.5rem;
-    position: relative;
-    border-color: steelblue;
-    border-width: 0.2rem;
+    background-color: dimgrey;
+    font-size: 2rem;
+    border: solid 0.1rem black;
     border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    color: lightgray;
+    width: 40rem;
 }
 
-.input-box:focus {
-    background: #e0eeff;
-    outline: none;
-}
-
-.paragraph-container {
-    white-space: normal;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    word-wrap: break-word;
-    justify-content: left;
-    text-align: left;
-    margin: 0.5rem 0;
-}
-
-.preview-div {
-    padding: 1rem;
-    background-color: cornflowerblue;
-    border-radius: 1rem;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-}
-
-.preview-div img {
-    display: block;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-.preview-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    line-height: 200px;
-    text-align: center;
-}
-
-.image-input:hover + .preview-div {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    top: -250px;
-    left: 7.5rem;
-}
-
-.image-container:hover + .preview-div {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    top: -250px;
-    left: 7.5rem;
-}
-
-.button-div {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-}
-
-.submission-button {
+#scramble-output {
+    font-size: 2rem;
     color: black;
-    font-size: 1.75rem;
-    font-weight: bold;
-    border-radius: 1.1rem;
-    border-color: steelblue;
-    border-width: 0.4rem;
-    cursor: pointer;
-    background-color: #e0eeff;
-    padding: 0.2rem 0.55rem;
-    margin: 1rem;
-    margin-top: 1.5rem;
 }
 
-.error-message {
+#error-message {
     color: red;
     font-size: 0.8rem;
     position: absolute;
-    top: -1rem;
+    top: 0.3rem;
+    /* calculate the left spacing for this based on the sizing of it's neighbour elements */
+}
+
+.btn-div {
+    position: absolute;
+    top: 2rem;
+    margin: 0 auto;
+    width: fit-content;
+    z-index: 2;
+}
+
+.btn {
+    font-size: 2rem;
+    margin: 0.5rem;
+    background-color: lightgray;
+    color: black;
+    padding: 1rem;
+    border: solid 0.1rem black;
+    border-radius: 1rem;
+}
+
+.hidden-on-load {
     display: none;
 }
-
-#voting-master-div {
-    display: inline-block;
-    margin: 0 auto;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-.voting-div {
-    display: flex;
-    justify-content: left;
-    max-width: 100%;
-    font-size: 2rem;
-    background-color: dodgerblue;
-    margin: 2rem auto;
-    padding: 0.5rem;
-    border-radius: 2rem;
-}
-
-.image-div {
-    padding: 1rem 1.5rem;
-    padding-right: 3rem;
-    width: 300px;
-    height: 300px;
-    display: block;
-    overflow: hidden;
-}
-
-.image-div img {
-    display: block;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-.candidate-image {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
-.info-div {
-    text-align: left;  
-    max-width: 75%;
-    font-size: 1.75rem;
-}
-
-.candidate-info {
-    width: 100%;
-}
-
-.message-container {
-    text-overflow: ellipsis;
-    max-width: 100%;
-    overflow-wrap: break-word;
-    justify-content: left;
-    text-align: left;
-    margin: 0.5rem 0;
-}
-
-
 
 .grow { 
     cursor: pointer;
@@ -304,22 +85,4 @@ body {
 
 .grow:hover { 
     transform: scale(1.1); 
-}
-
-.grow-small {
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-}
-
-#grow-enlarge {
-    transform: scale(1.015);
-    background-color: deepskyblue;
-}
-
-.grow-small:hover {
-    transform: scale(1.015);
-}
-
-.hidden-on-load {
-    display: none;
 }
