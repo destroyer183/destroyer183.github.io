@@ -1,4 +1,4 @@
-import * as THREE from "threejs";
+import * as THREE from "three";
 import { MoveType } from "./cubeMoveType";
 
 // cube piece sizing and spacing

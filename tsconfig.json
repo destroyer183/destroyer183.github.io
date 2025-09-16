@@ -13,7 +13,7 @@
         "allowJs": true,
         "checkJs": false,
         "paths": {
-            "threejs": ["./node_modules/@types/.three-gxyIJXyi/index.d.ts"]
+            "three": ["./node_modules/@types/.three-gxyIJXyi/index.d.ts"]
         }
     },
     "include": [
