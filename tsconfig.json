@@ -13,7 +13,8 @@
         "allowJs": true,
         "checkJs": false,
         "paths": {
-            "three": ["./node_modules/@types/.three-gxyIJXyi/index.d.ts"]
+            "three": ["./node_modules/@types/.three-gxyIJXyi/index.d.ts"],
+            "cubeMoveType": ["./dist/core/cubeMoveType.js"]
         }
     },
     "include": [
