@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'threejs';
 import { ColorType, pieceSize, gray } from './dataTypes';
 
 

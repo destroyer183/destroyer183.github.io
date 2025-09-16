@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import * as THREE from "threejs";
 import { EdgeTile, CornerTile, CenterTile, TileColor, CubeTile, PieceType, CubeMove, XYZ, MoveDataType, SolveType, CallbackData } from "./dataTypes";
 import { white, orange, green, red, blue, yellow } from "./dataTypes";
 import { constructCorner, constructEdge, constructCenter } from "./pieceConstructor";
